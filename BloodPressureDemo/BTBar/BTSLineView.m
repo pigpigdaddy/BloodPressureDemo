@@ -1,0 +1,261 @@
+//
+//  BTSLineView.m
+//  AnimationPlot
+//
+//  Created by 億 俞 on 12-7-20.
+//  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
+//
+
+#import "BTSLineView.h"
+#import <QuartzCore/QuartzCore.h>
+//#import "MHTool/MHFile.h"
+#import "URFileTool.h"
+
+#define MIN_DISTANCE_OF_POINT 120
+#define JIGEXIAN_TAG 32010
+
+@implementation BTSLineView
+@synthesize xLabel;
+@synthesize yLabel;
+@synthesize lineArray;
+@synthesize maxYValue;
+@synthesize isInversionY = _isInversionY;
+
+
+-(void)initView
+{
+    _contentView = [[UIScrollView alloc] initWithFrame:CGRectMake(12, 0, self.bounds.size.width - 45, self.bounds.size.height)];
+    _contentView.showsHorizontalScrollIndicator = NO;
+    _contentView.showsVerticalScrollIndicator = NO;
+    //    _contentView.bounces = NO;
+    //    [_contentView setBackgroundColor:[UIColor orangeColor]];
+    [self addSubview:_contentView];
+    self.backgroundColor = [UIColor clearColor];
+    
+    float yOffset = 0.4 * (self.bounds.size.height-50)+28;
+    UIImageView *jigexian = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chart_line_jigexian.png"]];
+    jigexian.tag = JIGEXIAN_TAG;
+    jigexian.frame = CGRectMake(-20, yOffset - 8, 42, 17);
+    [self addSubview:jigexian];
+    [jigexian release];
+    
+}
+- (id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        // Initialization code
+        [self initView];
+    }
+    return self;
+}
+
+-(id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        // Initialization code
+        [self initView];
+    }
+    return self;
+}
+
+- (void)dealloc
+{
+    [xLabel release];
+    [yLabel release];
+    [lineArray release];
+    [super dealloc];
+}
+
+-(void)setXLabel:(NSString *)theX{
+    [xLabel release];
+    xLabel = [theX retain];
+    [self setNeedsDisplay];
+}
+
+-(void)setYLabel:(NSString *)theY{
+    [yLabel release];
+    yLabel = [theY retain];
+    [self setNeedsDisplay];
+}
+
+
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect
+{
+    // Drawing code
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    UIColor *lineColor = [UIColor colorWithRed:222.0/255.0 green:222.0/255.0 blue:222.0/255.0 alpha:1.0];
+    CGContextSetStrokeColorWithColor(context, lineColor.CGColor);
+    CGContextSetLineWidth(context, 3);
+    CGContextSetLineCap(context, kCGLineCapRound);
+    //CGContextSetShadowWithColor(context, CGSizeMake(-2, 2), 0.4, [UIColor lightGrayColor].CGColor);
+    
+    CGContextMoveToPoint(context, 10, 25);
+    CGContextAddLineToPoint(context, 10, self.bounds.size.height-20);
+    CGContextStrokePath(context);
+    
+    CGContextMoveToPoint(context, 10, self.bounds.size.height-20);
+    CGContextAddLineToPoint(context, self.bounds.size.width-35, self.bounds.size.height-20);
+    CGContextStrokePath(context);
+    
+    [xLabel drawAtPoint:CGPointMake(self.bounds.size.width-30, self.bounds.size.height-20) withFont:[UIFont systemFontOfSize:12]];
+    [yLabel drawAtPoint:CGPointMake(0, 0) withFont:[UIFont systemFontOfSize:12]];
+    
+    UIView *jigexian = [self viewWithTag:JIGEXIAN_TAG];
+    jigexian.hidden = !_showRedLine;
+    if (_showRedLine) {
+        UIColor *red = [UIColor colorWithRed:212.0/255.0 green:38.0/255.0 blue:0.0/255.0 alpha:0.3];
+        UIColor *redPoint = [UIColor colorWithRed:212.0/255.0 green:38.0/255.0 blue:0.0/255.0 alpha:1.0];
+        float yOffset = 0.4 * (self.bounds.size.height-50)+28;
+        CGContextSetStrokeColorWithColor(context, red.CGColor);
+        CGContextSetFillColorWithColor(context, redPoint.CGColor);
+        CGContextSetLineWidth(context, 2.0);
+        
+        CGContextFillEllipseInRect(context, CGRectMake(7, yOffset - 4, 8, 8));
+        CGContextMoveToPoint(context, 13, yOffset);
+        CGContextAddLineToPoint(context, self.bounds.size.width-35, yOffset);
+        CGContextStrokePath(context);
+        
+    }
+}
+
+-(void)setLineArray:(NSMutableArray *)theArray{
+    [lineArray release];
+    lineArray = [theArray retain];
+    //    [self.layer.sublayers makeObjectsPerformSelector:@selector(removeFromSuperlayer)];
+    for (UIView *subView in _contentView.subviews) {
+        [subView removeFromSuperview];
+    }
+    BTSLineData *alineData = [lineArray objectAtIndex:0];
+    int distance = self.frame.size.width / alineData.pointArray.count;
+    if (distance < MIN_DISTANCE_OF_POINT) {
+        distance = MIN_DISTANCE_OF_POINT;
+    }
+    
+    for (BTSLineData *lineData in lineArray) {
+        [self insertLineSlice:lineData x:2];
+    }
+    for (int i = 0; i<alineData.xLabelArray.count; i++) {
+        int labelDistance = i*distance;
+        UILabel *myXLabel = [[UILabel alloc] initWithFrame:CGRectMake(labelDistance, _contentView.frame.size.height - 20, distance, 20)];
+        myXLabel.backgroundColor = [UIColor clearColor];
+        
+        myXLabel.textAlignment = NSTextAlignmentCenter;
+        
+        
+        myXLabel.font = [UIFont systemFontOfSize:12];
+        myXLabel.text = [alineData.xLabelArray objectAtIndex:i];
+        [_contentView addSubview:myXLabel];
+        [myXLabel release];
+        
+    }
+}
+
+-(void)insertLineSlice:(BTSLineData*)data x:(CGFloat)x{
+    CGMutablePathRef path = CGPathCreateMutable();
+    int distance = self.frame.size.width / data.pointArray.count;
+    if (distance < MIN_DISTANCE_OF_POINT) {
+        distance = MIN_DISTANCE_OF_POINT;
+    }
+    NSMutableArray *pointArrary = [[NSMutableArray alloc] init];
+    NSMutableArray *labelArrary = [[NSMutableArray alloc] init];
+    for (NSInteger i=0; i<data.pointArray.count; i++) {
+        BTSLinePoint *pointData = [data.pointArray objectAtIndex:i];
+        
+        CGFloat yOffset;
+        if (_isInversionY) {
+            yOffset = (pointData.yValue/pointData.yMaxValue)*(self.bounds.size.height-50)+28;
+        }
+        else {
+            yOffset = (1-pointData.yValue/pointData.yMaxValue)*(self.bounds.size.height-50)+28;
+        }
+        
+        
+        if (i==0) {
+            CGPathMoveToPoint(path, NULL, distance/2 , yOffset);
+            //            CGPathAddEllipseInRect(path, NULL, CGRectMake(25, yOffset-5, 8, 8));
+            UIImageView *point = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[URFileTool getResourcesFile:@"chart_line_point.png"]]];
+            point.frame = CGRectMake(distance/2 -5, yOffset-5, 11, 11);
+            [pointArrary addObject:point];
+            [point release];
+            UILabel *valueLabel = [[UILabel alloc] initWithFrame:CGRectMake(distance/2-19, yOffset - 10 - 20 , 40, 20)];
+            valueLabel.backgroundColor = [UIColor clearColor];
+            int intValue = (int)pointData.yValue;
+            if (pointData.yValue - intValue < 1e-6) {
+                valueLabel.text = [NSString stringWithFormat:@"%.f",pointData.yValue];
+            }else {
+                valueLabel.text = [NSString stringWithFormat:@"%.1f",pointData.yValue];
+            }
+            valueLabel.textAlignment = NSTextAlignmentCenter;
+            [labelArrary addObject:valueLabel];
+            [valueLabel release];
+            
+        }else {
+            //BTSLinePoint *linePoint = [data.pointArray objectAtIndex:i];
+            CGPathAddLineToPoint(path, NULL, (i+0.5)*distance, yOffset);
+            //            CGPathAddEllipseInRect(path, NULL, CGRectMake(i*distance+5, yOffset-5, 8, 8));
+            UIImageView *point = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[URFileTool getResourcesFile:@"chart_line_point.png"]]];
+            point.frame = CGRectMake((i+0.5)*distance -5, yOffset-5, 11, 11);
+            [pointArrary addObject:point];
+            [point release];
+            UILabel *valueLabel = [[UILabel alloc] initWithFrame:CGRectMake((i+0.5)*distance-19, yOffset - 10 - 20 , 40, 20)];
+            valueLabel.backgroundColor = [UIColor clearColor];
+            int intValue = (int)pointData.yValue;
+            if (pointData.yValue - intValue < 1e-6) {
+                valueLabel.text = [NSString stringWithFormat:@"%.f",pointData.yValue];
+            }else {
+                valueLabel.text = [NSString stringWithFormat:@"%.1f",pointData.yValue];
+            }
+            
+            valueLabel.textAlignment = NSTextAlignmentCenter;
+            [labelArrary addObject:valueLabel];
+            [valueLabel release];
+            
+        }
+    }
+    CAShapeLayer *lineLayer= [CAShapeLayer layer];
+    lineLayer.strokeColor = data.color.CGColor;
+    lineLayer.fillColor = [UIColor clearColor].CGColor;
+    lineLayer.lineWidth = 3;
+    lineLayer.path = path;
+    
+    UIView *content = [[UIView alloc] initWithFrame:CGRectMake(0, 0, distance * data.pointArray.count, self.frame.size.height)];
+    [_contentView addSubview:content];
+    [content.layer addSublayer:lineLayer];
+    [_contentView setContentSize:CGSizeMake(content.frame.size.width,self.frame.size.height)];
+    [content release];
+    
+    for (UIImageView *point in pointArrary) {
+        [_contentView addSubview:point];
+    }
+    for (UILabel *label in labelArrary) {
+        [_contentView addSubview:label];
+    }
+    [pointArrary release];
+    [labelArrary release];
+    
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    animation.duration = 1;
+    animation.fillMode = kCAFillModeForwards;
+    animation.fromValue = [NSNumber numberWithFloat:0.0f];
+    animation.toValue   = [NSNumber numberWithFloat:1.0f];
+    
+    //    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"path"];
+    //    animation.duration = 0.5;
+    //    animation.fillMode = kCAFillModeForwards;
+    //
+    //    CGMutablePathRef startPath = CGPathCreateMutable();
+    //    CGPathMoveToPoint(startPath, NULL, 13, 100);
+    //    animation.fromValue = lineLayer.path;
+    //
+    //    animation.toValue   = path;
+    
+    
+    [lineLayer addAnimation:animation forKey:@"animation"];
+    CGPathRelease(path);
+}
+
+@end
