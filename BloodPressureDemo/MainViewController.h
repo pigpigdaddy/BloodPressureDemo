@@ -23,5 +23,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *buttonHistory;
 @property (nonatomic, strong)NSMutableArray *data;
 
+- (void)fetchData;
+
 
 @end

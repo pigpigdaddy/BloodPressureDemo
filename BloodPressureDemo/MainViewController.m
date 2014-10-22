@@ -72,7 +72,7 @@
 
 - (void)initData
 {
-    [self fetchData];
+//    [self fetchData];
 }
 
 - (void)setData:(NSMutableArray *)data

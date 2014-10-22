@@ -91,6 +91,7 @@
     self.buttonLogin.enabled = NO;
     [self presentViewController:self.mainViewController animated:YES completion:^{
         self.buttonLogin.enabled = YES;
+        [self.mainViewController fetchData];
     }];
 }
 
