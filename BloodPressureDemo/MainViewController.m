@@ -27,6 +27,11 @@
     [self initData];
 }
 
+- (void)dealloc
+{
+    
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -53,6 +58,8 @@
     self.buttonHistory.enabled = NO;
     [self presentViewController:self.lineViewController animated:YES completion:^{
         self.buttonHistory.enabled = YES;
+        
+        self.lineViewController.data = _data;
     }];
 }
 
@@ -73,8 +80,9 @@
     _data = data;
     
     // 刷新
-    [self.highView showValue:133];
-    [self.lowView showValue:90];
+    NSDictionary *dict = [_data lastObject];
+    [self.highView showValue:[[dict objectForKey:@"high"] intValue]];
+    [self.lowView showValue:[[dict objectForKey:@"low"] intValue]];
 }
 
 - (void)initView

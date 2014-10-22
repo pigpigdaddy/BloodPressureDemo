@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		677F695E19F5ED8200CFFC41 /* BTSBarData.m in Sources */ = {isa = PBXBuildFile; fileRef = 677F694A19F5ED8200CFFC41 /* BTSBarData.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		677F695F19F5ED8200CFFC41 /* BTSBarLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 677F694C19F5ED8200CFFC41 /* BTSBarLayer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		677F696019F5ED8200CFFC41 /* BTSBarSliceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 677F694E19F5ED8200CFFC41 /* BTSBarSliceLayer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		677F696119F5ED8200CFFC41 /* BTSBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 677F695019F5ED8200CFFC41 /* BTSBarView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		677F696219F5ED8200CFFC41 /* BTSLineData.m in Sources */ = {isa = PBXBuildFile; fileRef = 677F695219F5ED8200CFFC41 /* BTSLineData.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		677F696319F5ED8200CFFC41 /* BTSLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 677F695419F5ED8200CFFC41 /* BTSLineView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		677F696419F5ED8200CFFC41 /* BTSPieLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 677F695619F5ED8200CFFC41 /* BTSPieLayer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		677F696519F5ED8200CFFC41 /* BTSPieView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 677F695819F5ED8200CFFC41 /* BTSPieView.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		677F696619F5ED8200CFFC41 /* BTSSliceData.m in Sources */ = {isa = PBXBuildFile; fileRef = 677F695B19F5ED8200CFFC41 /* BTSSliceData.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		677F696719F5ED8200CFFC41 /* BTSSliceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 677F695D19F5ED8200CFFC41 /* BTSSliceLayer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		674B232219F746DC009CAD83 /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 674B231B19F746DC009CAD83 /* PopoverView.m */; };
+		674B232319F746DC009CAD83 /* SHLineGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 674B231F19F746DC009CAD83 /* SHLineGraphView.m */; };
+		674B232419F746DC009CAD83 /* SHPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = 674B232119F746DC009CAD83 /* SHPlot.m */; };
+		674B232619F74700009CAD83 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 674B232519F74700009CAD83 /* CoreGraphics.framework */; };
+		674B233519F74BAB009CAD83 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 674B232A19F74BAB009CAD83 /* NSObject+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		674B233619F74BAB009CAD83 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 674B232C19F74BAB009CAD83 /* NSString+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		674B233719F74BAB009CAD83 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 674B232E19F74BAB009CAD83 /* SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		674B233819F74BAB009CAD83 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 674B233019F74BAB009CAD83 /* SBJsonBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		674B233919F74BAB009CAD83 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 674B233219F74BAB009CAD83 /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		674B233A19F74BAB009CAD83 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 674B233419F74BAB009CAD83 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		677F696A19F5FD2800CFFC41 /* RoundLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 677F696919F5FD2800CFFC41 /* RoundLabelView.m */; };
 		677F697D19F6041400CFFC41 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 677F696D19F6041400CFFC41 /* GTMBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		677F697E19F6041400CFFC41 /* MHNetWorkListenner.m in Sources */ = {isa = PBXBuildFile; fileRef = 677F697019F6041400CFFC41 /* MHNetWorkListenner.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -27,13 +27,6 @@
 		677F698419F6041400CFFC41 /* URFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 677F697C19F6041400CFFC41 /* URFileTool.m */; };
 		677F698719F62E6800CFFC41 /* LineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 677F698619F62E6800CFFC41 /* LineViewController.m */; };
 		677F698919F62F5F00CFFC41 /* LineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 677F698819F62F5F00CFFC41 /* LineViewController.xib */; };
-		677F6A4119F64FA800CFFC41 /* GKBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 677F6A3419F64FA800CFFC41 /* GKBar.m */; };
-		677F6A4219F64FA800CFFC41 /* GKBarGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 677F6A3619F64FA800CFFC41 /* GKBarGraph.m */; };
-		677F6A4319F64FA800CFFC41 /* GKLineGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 677F6A3A19F64FA800CFFC41 /* GKLineGraph.m */; };
-		677F6A4419F64FA800CFFC41 /* UIColor+GraphKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 677F6A3C19F64FA800CFFC41 /* UIColor+GraphKit.m */; };
-		677F6AE019F654DC00CFFC41 /* libPods-BButton.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 677F6ACE19F654DC00CFFC41 /* libPods-BButton.a */; };
-		677F6AE119F654DC00CFFC41 /* libPods-FrameAccessor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 677F6ACF19F654DC00CFFC41 /* libPods-FrameAccessor.a */; };
-		677F6AE219F654DC00CFFC41 /* libPods-MKFoundationKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 677F6AD019F654DC00CFFC41 /* libPods-MKFoundationKit.a */; };
 		67CC82CB19F4B65F0029AC98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CC82CA19F4B65F0029AC98 /* main.m */; };
 		67CC82CE19F4B65F0029AC98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CC82CD19F4B65F0029AC98 /* AppDelegate.m */; };
 		67CC82D119F4B65F0029AC98 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CC82D019F4B65F0029AC98 /* ViewController.m */; };
@@ -67,27 +60,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		677F694919F5ED8200CFFC41 /* BTSBarData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTSBarData.h; sourceTree = "<group>"; };
-		677F694A19F5ED8200CFFC41 /* BTSBarData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTSBarData.m; sourceTree = "<group>"; };
-		677F694B19F5ED8200CFFC41 /* BTSBarLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTSBarLayer.h; sourceTree = "<group>"; };
-		677F694C19F5ED8200CFFC41 /* BTSBarLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTSBarLayer.m; sourceTree = "<group>"; };
-		677F694D19F5ED8200CFFC41 /* BTSBarSliceLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTSBarSliceLayer.h; sourceTree = "<group>"; };
-		677F694E19F5ED8200CFFC41 /* BTSBarSliceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTSBarSliceLayer.m; sourceTree = "<group>"; };
-		677F694F19F5ED8200CFFC41 /* BTSBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTSBarView.h; sourceTree = "<group>"; };
-		677F695019F5ED8200CFFC41 /* BTSBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTSBarView.m; sourceTree = "<group>"; };
-		677F695119F5ED8200CFFC41 /* BTSLineData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTSLineData.h; sourceTree = "<group>"; };
-		677F695219F5ED8200CFFC41 /* BTSLineData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTSLineData.m; sourceTree = "<group>"; };
-		677F695319F5ED8200CFFC41 /* BTSLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTSLineView.h; sourceTree = "<group>"; };
-		677F695419F5ED8200CFFC41 /* BTSLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTSLineView.m; sourceTree = "<group>"; };
-		677F695519F5ED8200CFFC41 /* BTSPieLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTSPieLayer.h; sourceTree = "<group>"; };
-		677F695619F5ED8200CFFC41 /* BTSPieLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTSPieLayer.m; sourceTree = "<group>"; };
-		677F695719F5ED8200CFFC41 /* BTSPieView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTSPieView.h; sourceTree = "<group>"; };
-		677F695819F5ED8200CFFC41 /* BTSPieView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BTSPieView.mm; sourceTree = "<group>"; };
-		677F695919F5ED8200CFFC41 /* BTSPieViewValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTSPieViewValues.h; sourceTree = "<group>"; };
-		677F695A19F5ED8200CFFC41 /* BTSSliceData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTSSliceData.h; sourceTree = "<group>"; };
-		677F695B19F5ED8200CFFC41 /* BTSSliceData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTSSliceData.m; sourceTree = "<group>"; };
-		677F695C19F5ED8200CFFC41 /* BTSSliceLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTSSliceLayer.h; sourceTree = "<group>"; };
-		677F695D19F5ED8200CFFC41 /* BTSSliceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTSSliceLayer.m; sourceTree = "<group>"; };
+		674B231A19F746DC009CAD83 /* PopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverView.h; sourceTree = "<group>"; };
+		674B231B19F746DC009CAD83 /* PopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverView.m; sourceTree = "<group>"; };
+		674B231C19F746DC009CAD83 /* PopoverView_Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverView_Configuration.h; sourceTree = "<group>"; };
+		674B231D19F746DC009CAD83 /* PopoverViewCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverViewCompatibility.h; sourceTree = "<group>"; };
+		674B231E19F746DC009CAD83 /* SHLineGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHLineGraphView.h; sourceTree = "<group>"; };
+		674B231F19F746DC009CAD83 /* SHLineGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHLineGraphView.m; sourceTree = "<group>"; };
+		674B232019F746DC009CAD83 /* SHPlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHPlot.h; sourceTree = "<group>"; };
+		674B232119F746DC009CAD83 /* SHPlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHPlot.m; sourceTree = "<group>"; };
+		674B232519F74700009CAD83 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		674B232819F74BAB009CAD83 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		674B232919F74BAB009CAD83 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		674B232A19F74BAB009CAD83 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		674B232B19F74BAB009CAD83 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		674B232C19F74BAB009CAD83 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		674B232D19F74BAB009CAD83 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		674B232E19F74BAB009CAD83 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		674B232F19F74BAB009CAD83 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		674B233019F74BAB009CAD83 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		674B233119F74BAB009CAD83 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		674B233219F74BAB009CAD83 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		674B233319F74BAB009CAD83 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		674B233419F74BAB009CAD83 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		677F696819F5FD2700CFFC41 /* RoundLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundLabelView.h; sourceTree = "<group>"; };
 		677F696919F5FD2800CFFC41 /* RoundLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundLabelView.m; sourceTree = "<group>"; };
 		677F696C19F6041400CFFC41 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
@@ -108,30 +102,6 @@
 		677F698519F62E6800CFFC41 /* LineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineViewController.h; sourceTree = "<group>"; };
 		677F698619F62E6800CFFC41 /* LineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineViewController.m; sourceTree = "<group>"; };
 		677F698819F62F5F00CFFC41 /* LineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LineViewController.xib; sourceTree = "<group>"; };
-		677F6A3319F64FA800CFFC41 /* GKBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKBar.h; sourceTree = "<group>"; };
-		677F6A3419F64FA800CFFC41 /* GKBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBar.m; sourceTree = "<group>"; };
-		677F6A3519F64FA800CFFC41 /* GKBarGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKBarGraph.h; sourceTree = "<group>"; };
-		677F6A3619F64FA800CFFC41 /* GKBarGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBarGraph.m; sourceTree = "<group>"; };
-		677F6A3719F64FA800CFFC41 /* GraphKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphKit.h; sourceTree = "<group>"; };
-		677F6A3919F64FA800CFFC41 /* GKLineGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKLineGraph.h; sourceTree = "<group>"; };
-		677F6A3A19F64FA800CFFC41 /* GKLineGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKLineGraph.m; sourceTree = "<group>"; };
-		677F6A3B19F64FA800CFFC41 /* UIColor+GraphKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+GraphKit.h"; sourceTree = "<group>"; };
-		677F6A3C19F64FA800CFFC41 /* UIColor+GraphKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GraphKit.m"; sourceTree = "<group>"; };
-		677F6ACE19F654DC00CFFC41 /* libPods-BButton.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libPods-BButton.a"; sourceTree = "<group>"; };
-		677F6ACF19F654DC00CFFC41 /* libPods-FrameAccessor.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libPods-FrameAccessor.a"; sourceTree = "<group>"; };
-		677F6AD019F654DC00CFFC41 /* libPods-MKFoundationKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libPods-MKFoundationKit.a"; sourceTree = "<group>"; };
-		677F6AD219F654DC00CFFC41 /* BButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BButton.h; sourceTree = "<group>"; };
-		677F6AD319F654DC00CFFC41 /* NSString+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FontAwesome.h"; sourceTree = "<group>"; };
-		677F6AD419F654DC00CFFC41 /* UIColor+BButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+BButton.h"; sourceTree = "<group>"; };
-		677F6AD619F654DC00CFFC41 /* FrameAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameAccessor.h; sourceTree = "<group>"; };
-		677F6AD719F654DC00CFFC41 /* ScrollViewFrameAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewFrameAccessor.h; sourceTree = "<group>"; };
-		677F6AD819F654DC00CFFC41 /* ViewFrameAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewFrameAccessor.h; sourceTree = "<group>"; };
-		677F6ADA19F654DC00CFFC41 /* NSArray+MK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MK.h"; sourceTree = "<group>"; };
-		677F6ADB19F654DC00CFFC41 /* NSArray+MK_Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MK_Block.h"; sourceTree = "<group>"; };
-		677F6ADC19F654DC00CFFC41 /* NSArray+MK_Misc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MK_Misc.h"; sourceTree = "<group>"; };
-		677F6ADD19F654DC00CFFC41 /* NSMutableArray+MK_Misc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+MK_Misc.h"; sourceTree = "<group>"; };
-		677F6ADE19F654DC00CFFC41 /* NSMutableArray+MK_Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+MK_Queue.h"; sourceTree = "<group>"; };
-		677F6ADF19F654DC00CFFC41 /* NSMutableArray+MK_Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+MK_Stack.h"; sourceTree = "<group>"; };
 		67CC82C519F4B65F0029AC98 /* BloodPressureDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BloodPressureDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67CC82C919F4B65F0029AC98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67CC82CA19F4B65F0029AC98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -180,10 +150,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				677F6AE019F654DC00CFFC41 /* libPods-BButton.a in Frameworks */,
-				677F6AE219F654DC00CFFC41 /* libPods-MKFoundationKit.a in Frameworks */,
+				674B232619F74700009CAD83 /* CoreGraphics.framework in Frameworks */,
 				67CC831519F4F9420029AC98 /* libz.1.2.5.dylib in Frameworks */,
-				677F6AE119F654DC00CFFC41 /* libPods-FrameAccessor.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,32 +165,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		677F694819F5ED8200CFFC41 /* BTBar */ = {
+		674B231819F746D3009CAD83 /* SHLine */ = {
 			isa = PBXGroup;
 			children = (
-				677F694919F5ED8200CFFC41 /* BTSBarData.h */,
-				677F694A19F5ED8200CFFC41 /* BTSBarData.m */,
-				677F694B19F5ED8200CFFC41 /* BTSBarLayer.h */,
-				677F694C19F5ED8200CFFC41 /* BTSBarLayer.m */,
-				677F694D19F5ED8200CFFC41 /* BTSBarSliceLayer.h */,
-				677F694E19F5ED8200CFFC41 /* BTSBarSliceLayer.m */,
-				677F694F19F5ED8200CFFC41 /* BTSBarView.h */,
-				677F695019F5ED8200CFFC41 /* BTSBarView.m */,
-				677F695119F5ED8200CFFC41 /* BTSLineData.h */,
-				677F695219F5ED8200CFFC41 /* BTSLineData.m */,
-				677F695319F5ED8200CFFC41 /* BTSLineView.h */,
-				677F695419F5ED8200CFFC41 /* BTSLineView.m */,
-				677F695519F5ED8200CFFC41 /* BTSPieLayer.h */,
-				677F695619F5ED8200CFFC41 /* BTSPieLayer.m */,
-				677F695719F5ED8200CFFC41 /* BTSPieView.h */,
-				677F695819F5ED8200CFFC41 /* BTSPieView.mm */,
-				677F695919F5ED8200CFFC41 /* BTSPieViewValues.h */,
-				677F695A19F5ED8200CFFC41 /* BTSSliceData.h */,
-				677F695B19F5ED8200CFFC41 /* BTSSliceData.m */,
-				677F695C19F5ED8200CFFC41 /* BTSSliceLayer.h */,
-				677F695D19F5ED8200CFFC41 /* BTSSliceLayer.m */,
+				674B231919F746DC009CAD83 /* SHLineGraphView */,
 			);
-			path = BTBar;
+			path = SHLine;
+			sourceTree = "<group>";
+		};
+		674B231919F746DC009CAD83 /* SHLineGraphView */ = {
+			isa = PBXGroup;
+			children = (
+				674B231A19F746DC009CAD83 /* PopoverView.h */,
+				674B231B19F746DC009CAD83 /* PopoverView.m */,
+				674B231C19F746DC009CAD83 /* PopoverView_Configuration.h */,
+				674B231D19F746DC009CAD83 /* PopoverViewCompatibility.h */,
+				674B231E19F746DC009CAD83 /* SHLineGraphView.h */,
+				674B231F19F746DC009CAD83 /* SHLineGraphView.m */,
+				674B232019F746DC009CAD83 /* SHPlot.h */,
+				674B232119F746DC009CAD83 /* SHPlot.m */,
+			);
+			path = SHLineGraphView;
+			sourceTree = "<group>";
+		};
+		674B232719F74BAB009CAD83 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				674B232819F74BAB009CAD83 /* JSON.h */,
+				674B232919F74BAB009CAD83 /* NSObject+SBJSON.h */,
+				674B232A19F74BAB009CAD83 /* NSObject+SBJSON.m */,
+				674B232B19F74BAB009CAD83 /* NSString+SBJSON.h */,
+				674B232C19F74BAB009CAD83 /* NSString+SBJSON.m */,
+				674B232D19F74BAB009CAD83 /* SBJSON.h */,
+				674B232E19F74BAB009CAD83 /* SBJSON.m */,
+				674B232F19F74BAB009CAD83 /* SBJsonBase.h */,
+				674B233019F74BAB009CAD83 /* SBJsonBase.m */,
+				674B233119F74BAB009CAD83 /* SBJsonParser.h */,
+				674B233219F74BAB009CAD83 /* SBJsonParser.m */,
+				674B233319F74BAB009CAD83 /* SBJsonWriter.h */,
+				674B233419F74BAB009CAD83 /* SBJsonWriter.m */,
+			);
+			path = Json;
 			sourceTree = "<group>";
 		};
 		677F696B19F6041400CFFC41 /* URTool */ = {
@@ -247,88 +230,10 @@
 			path = URTool;
 			sourceTree = "<group>";
 		};
-		677F6A2C19F64FA800CFFC41 /* GraphKit */ = {
-			isa = PBXGroup;
-			children = (
-				677F6ACE19F654DC00CFFC41 /* libPods-BButton.a */,
-				677F6ACF19F654DC00CFFC41 /* libPods-FrameAccessor.a */,
-				677F6AD019F654DC00CFFC41 /* libPods-MKFoundationKit.a */,
-				677F6AD119F654DC00CFFC41 /* Pods-BButton */,
-				677F6AD519F654DC00CFFC41 /* Pods-FrameAccessor */,
-				677F6AD919F654DC00CFFC41 /* Pods-MKFoundationKit */,
-				677F6A3119F64FA800CFFC41 /* Source */,
-			);
-			path = GraphKit;
-			sourceTree = "<group>";
-		};
-		677F6A3119F64FA800CFFC41 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				677F6A3219F64FA800CFFC41 /* BarGraph */,
-				677F6A3719F64FA800CFFC41 /* GraphKit.h */,
-				677F6A3819F64FA800CFFC41 /* LineGraph */,
-				677F6A3B19F64FA800CFFC41 /* UIColor+GraphKit.h */,
-				677F6A3C19F64FA800CFFC41 /* UIColor+GraphKit.m */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
-		677F6A3219F64FA800CFFC41 /* BarGraph */ = {
-			isa = PBXGroup;
-			children = (
-				677F6A3319F64FA800CFFC41 /* GKBar.h */,
-				677F6A3419F64FA800CFFC41 /* GKBar.m */,
-				677F6A3519F64FA800CFFC41 /* GKBarGraph.h */,
-				677F6A3619F64FA800CFFC41 /* GKBarGraph.m */,
-			);
-			path = BarGraph;
-			sourceTree = "<group>";
-		};
-		677F6A3819F64FA800CFFC41 /* LineGraph */ = {
-			isa = PBXGroup;
-			children = (
-				677F6A3919F64FA800CFFC41 /* GKLineGraph.h */,
-				677F6A3A19F64FA800CFFC41 /* GKLineGraph.m */,
-			);
-			path = LineGraph;
-			sourceTree = "<group>";
-		};
-		677F6AD119F654DC00CFFC41 /* Pods-BButton */ = {
-			isa = PBXGroup;
-			children = (
-				677F6AD219F654DC00CFFC41 /* BButton.h */,
-				677F6AD319F654DC00CFFC41 /* NSString+FontAwesome.h */,
-				677F6AD419F654DC00CFFC41 /* UIColor+BButton.h */,
-			);
-			path = "Pods-BButton";
-			sourceTree = "<group>";
-		};
-		677F6AD519F654DC00CFFC41 /* Pods-FrameAccessor */ = {
-			isa = PBXGroup;
-			children = (
-				677F6AD619F654DC00CFFC41 /* FrameAccessor.h */,
-				677F6AD719F654DC00CFFC41 /* ScrollViewFrameAccessor.h */,
-				677F6AD819F654DC00CFFC41 /* ViewFrameAccessor.h */,
-			);
-			path = "Pods-FrameAccessor";
-			sourceTree = "<group>";
-		};
-		677F6AD919F654DC00CFFC41 /* Pods-MKFoundationKit */ = {
-			isa = PBXGroup;
-			children = (
-				677F6ADA19F654DC00CFFC41 /* NSArray+MK.h */,
-				677F6ADB19F654DC00CFFC41 /* NSArray+MK_Block.h */,
-				677F6ADC19F654DC00CFFC41 /* NSArray+MK_Misc.h */,
-				677F6ADD19F654DC00CFFC41 /* NSMutableArray+MK_Misc.h */,
-				677F6ADE19F654DC00CFFC41 /* NSMutableArray+MK_Queue.h */,
-				677F6ADF19F654DC00CFFC41 /* NSMutableArray+MK_Stack.h */,
-			);
-			path = "Pods-MKFoundationKit";
-			sourceTree = "<group>";
-		};
 		67CC82BC19F4B65F0029AC98 = {
 			isa = PBXGroup;
 			children = (
+				674B232519F74700009CAD83 /* CoreGraphics.framework */,
 				67CC831419F4F9420029AC98 /* libz.1.2.5.dylib */,
 				67CC82C719F4B65F0029AC98 /* BloodPressureDemo */,
 				67CC82E119F4B65F0029AC98 /* BloodPressureDemoTests */,
@@ -348,9 +253,9 @@
 		67CC82C719F4B65F0029AC98 /* BloodPressureDemo */ = {
 			isa = PBXGroup;
 			children = (
-				677F6A2C19F64FA800CFFC41 /* GraphKit */,
+				674B232719F74BAB009CAD83 /* Json */,
+				674B231819F746D3009CAD83 /* SHLine */,
 				677F696B19F6041400CFFC41 /* URTool */,
-				677F694819F5ED8200CFFC41 /* BTBar */,
 				67CC82F319F4F8920029AC98 /* ASIHttpRequest */,
 				67CC830819F4F8920029AC98 /* NetWork */,
 				67CC82CC19F4B65F0029AC98 /* AppDelegate.h */,
@@ -539,43 +444,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				677F6A4319F64FA800CFFC41 /* GKLineGraph.m in Sources */,
-				677F696319F5ED8200CFFC41 /* BTSLineView.m in Sources */,
 				67CC831319F4F8920029AC98 /* Reachability.m in Sources */,
 				677F698019F6041400CFFC41 /* URAnimationTool.m in Sources */,
 				677F698119F6041400CFFC41 /* URCommonTool.m in Sources */,
+				674B232419F746DC009CAD83 /* SHPlot.m in Sources */,
+				674B233919F74BAB009CAD83 /* SBJsonParser.m in Sources */,
 				67CC830C19F4F8920029AC98 /* ASIDataCompressor.m in Sources */,
-				677F695E19F5ED8200CFFC41 /* BTSBarData.m in Sources */,
-				677F696219F5ED8200CFFC41 /* BTSLineData.m in Sources */,
 				677F697E19F6041400CFFC41 /* MHNetWorkListenner.m in Sources */,
-				677F696519F5ED8200CFFC41 /* BTSPieView.mm in Sources */,
-				677F695F19F5ED8200CFFC41 /* BTSBarLayer.m in Sources */,
 				67CC82D119F4B65F0029AC98 /* ViewController.m in Sources */,
-				677F696719F5ED8200CFFC41 /* BTSSliceLayer.m in Sources */,
+				674B233819F74BAB009CAD83 /* SBJsonBase.m in Sources */,
 				67CC82CE19F4B65F0029AC98 /* AppDelegate.m in Sources */,
-				677F696619F5ED8200CFFC41 /* BTSSliceData.m in Sources */,
-				677F696019F5ED8200CFFC41 /* BTSBarSliceLayer.m in Sources */,
 				67CC830B19F4F8920029AC98 /* ASIAuthenticationDialog.m in Sources */,
-				677F6A4419F64FA800CFFC41 /* UIColor+GraphKit.m in Sources */,
 				67CC830F19F4F8920029AC98 /* ASIFormDataRequest.m in Sources */,
 				677F696A19F5FD2800CFFC41 /* RoundLabelView.m in Sources */,
 				67CC830D19F4F8920029AC98 /* ASIDataDecompressor.m in Sources */,
 				67CC82CB19F4B65F0029AC98 /* main.m in Sources */,
+				674B233719F74BAB009CAD83 /* SBJSON.m in Sources */,
 				677F698719F62E6800CFFC41 /* LineViewController.m in Sources */,
-				677F6A4219F64FA800CFFC41 /* GKBarGraph.m in Sources */,
 				67CC831819F506540029AC98 /* PPDHttpRequest.m in Sources */,
 				67CC831119F4F8920029AC98 /* ASIInputStream.m in Sources */,
-				677F696419F5ED8200CFFC41 /* BTSPieLayer.m in Sources */,
 				677F698419F6041400CFFC41 /* URFileTool.m in Sources */,
 				67CC831219F4F8920029AC98 /* ASINetworkQueue.m in Sources */,
+				674B233A19F74BAB009CAD83 /* SBJsonWriter.m in Sources */,
 				67CC831019F4F8920029AC98 /* ASIHTTPRequest.m in Sources */,
+				674B232319F746DC009CAD83 /* SHLineGraphView.m in Sources */,
 				67CC830E19F4F8920029AC98 /* ASIDownloadCache.m in Sources */,
 				677F697D19F6041400CFFC41 /* GTMBase64.m in Sources */,
-				677F696119F5ED8200CFFC41 /* BTSBarView.m in Sources */,
+				674B233519F74BAB009CAD83 /* NSObject+SBJSON.m in Sources */,
 				67CC82F119F4E0960029AC98 /* MainViewController.m in Sources */,
 				677F698319F6041400CFFC41 /* URDeviceTool.m in Sources */,
+				674B232219F746DC009CAD83 /* PopoverView.m in Sources */,
+				674B233619F74BAB009CAD83 /* NSString+SBJSON.m in Sources */,
 				677F698219F6041400CFFC41 /* URDateTool.m in Sources */,
-				677F6A4119F64FA800CFFC41 /* GKBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "MainViewController.h"
+#import "PPDHttpRequest.h"
+#import "JSON.h"
 
 #define USER_NAME_TEST_ONE @"wangfei"
 #define USER_NAME_TEST_TWO @"smallhead"
@@ -112,6 +114,30 @@
 
 #pragma mark
 #pragma mark ============ MainViewControllerDelegate ============
+
+// 获取数据
+- (void)getData
+{
+    NSString *url = [NSString stringWithFormat:@"http://122.96.49.28/%@.php?username=", self.textFieldName.text];
+    
+    [[PPDHttpRequest shareInstance] requestWithUrlString:url complection:^(id arg) {
+        //
+        NSLog(@"%@", arg);
+        id object = [arg JSONValue];
+        if (object && [object isKindOfClass:[NSArray class]]) {
+            //
+            self.mainViewController.data = [NSMutableArray arrayWithArray:(NSArray *)object];
+        }else{
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"警告" message:@"服务器数据出错" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            [alertView show];
+        }
+    } failure:^(id arg) {
+        //
+        NSLog(@"%@", arg);
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"警告" message:@"服务器请求失败" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alertView show];
+    }];
+}
 
 
 @end

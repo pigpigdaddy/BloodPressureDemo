@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BTSLineData.h"
-#import "BTSLineView.h"
+#import "SHLineGraphView.h"
 
 @interface LineViewController : UIViewController
 
-@property (nonatomic, strong)BTSLineView *highLineView;
-@property (nonatomic, strong)BTSLineView *lowLineView;
+@property (nonatomic, strong) SHLineGraphView *lineView;
+@property (nonatomic, strong) NSMutableArray *yLabels;
+@property (nonatomic, strong) NSMutableArray *xLabels;
+
+@property (nonatomic, strong) NSMutableArray *data;
 
 @end
