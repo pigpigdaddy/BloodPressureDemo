@@ -27,6 +27,7 @@
 		677F698419F6041400CFFC41 /* URFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 677F697C19F6041400CFFC41 /* URFileTool.m */; };
 		677F698719F62E6800CFFC41 /* LineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 677F698619F62E6800CFFC41 /* LineViewController.m */; };
 		677F698919F62F5F00CFFC41 /* LineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 677F698819F62F5F00CFFC41 /* LineViewController.xib */; };
+		67B6655919FF746B00534F88 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67B6655819FF746B00534F88 /* logo@2x.png */; };
 		67CC82CB19F4B65F0029AC98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CC82CA19F4B65F0029AC98 /* main.m */; };
 		67CC82CE19F4B65F0029AC98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CC82CD19F4B65F0029AC98 /* AppDelegate.m */; };
 		67CC82D119F4B65F0029AC98 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CC82D019F4B65F0029AC98 /* ViewController.m */; };
@@ -102,6 +103,7 @@
 		677F698519F62E6800CFFC41 /* LineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineViewController.h; sourceTree = "<group>"; };
 		677F698619F62E6800CFFC41 /* LineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineViewController.m; sourceTree = "<group>"; };
 		677F698819F62F5F00CFFC41 /* LineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LineViewController.xib; sourceTree = "<group>"; };
+		67B6655819FF746B00534F88 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
 		67CC82C519F4B65F0029AC98 /* BloodPressureDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BloodPressureDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67CC82C919F4B65F0029AC98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67CC82CA19F4B65F0029AC98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 		67CC82C819F4B65F0029AC98 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				67B6655819FF746B00534F88 /* logo@2x.png */,
 				67CC82C919F4B65F0029AC98 /* Info.plist */,
 				67CC82CA19F4B65F0029AC98 /* main.m */,
 			);
@@ -423,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				677F698919F62F5F00CFFC41 /* LineViewController.xib in Resources */,
+				67B6655919FF746B00534F88 /* logo@2x.png in Resources */,
 				67CC82D419F4B65F0029AC98 /* Main.storyboard in Resources */,
 				67CC82D919F4B65F0029AC98 /* LaunchScreen.xib in Resources */,
 				67CC82D619F4B65F0029AC98 /* Images.xcassets in Resources */,

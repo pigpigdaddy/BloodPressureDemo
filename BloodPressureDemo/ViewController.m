@@ -119,7 +119,7 @@
 // 获取数据
 - (void)getData
 {
-    NSString *url = [NSString stringWithFormat:@"http://122.96.49.28/%@.php?username=", self.textFieldName.text];
+    NSString *url = [NSString stringWithFormat:@"http://122.96.49.28/blood.php?username=%@", self.textFieldName.text];
     
     [[PPDHttpRequest shareInstance] requestWithUrlString:url complection:^(id arg) {
         //
